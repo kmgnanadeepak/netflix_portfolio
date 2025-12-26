@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Safe Fall – Fall Detection & SOS Alert System",
     description:
-      "A real-time fall detection and emergency response system designed to identify sudden falls and trigger immediate SOS alerts to family and friends. The platform focuses on rapid response, user safety, and reliable notification flow.",
+      "A real-time fall detection and emergency response system designed to identify sudden falls and trigger immediate SOS alerts to family and friends.",
     tech: ["React", "Express.js", "MongoDB", "Node.js", "Responsive Design"],
     gradient: "from-red-600/30 to-black",
     github: "https://github.com/kmgnanadeepak/safe-guard.git",
@@ -98,91 +98,34 @@ const ProjectsSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
+        {/* Header */}
         <div className="text-center mb-16 reveal">
           <h2 className="section-title">MY PROJECTS</h2>
           <p className="section-subtitle mx-auto">
             A collection of projects showcasing my skills in full-stack
-            development and creative problem-solving.
+            development and real-world problem solving.
           </p>
         </div>
 
-        <div className="mb-12">
-          <h3 className="font-display text-2xl text-foreground mb-6 reveal">
-            FEATURED WORKS
-          </h3>
+       
 
-          <div className="horizontal-scroll reveal">
-            {projects.slice(0, 4).map((project, index) => (
-              <div
-                key={project.title}
-                className="glass-card w-80 md:w-96 flex-shrink-0 overflow-hidden group"
-                style={{ transitionDelay: `${index * 0.1}s` }}
-              >
-                <div
-                  className={`relative h-48 bg-gradient-to-br ${
-                    project.gradient || "from-primary/20 to-secondary"
-                  } flex items-center justify-center`}
-                >
-                  <project.icon className="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-500" />
-                </div>
-
-                <div className="p-6">
-                  <h4 className="font-display text-2xl text-foreground mb-2">
-                    {project.title}
-                  </h4>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((t) => (
-                      <span key={t} className="tag-chip">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-3">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-ghost flex-1 flex items-center justify-center gap-2 py-2"
-                    >
-                      <Github size={16} />
-                      GitHub
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-netflix flex-1 flex items-center justify-center gap-2 py-2"
-                    >
-                      <ExternalLink size={16} />
-                      Demo
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        {/* Grid Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
           {projects.map((project, index) => (
             <div
               key={project.title + index}
-              className="glass-card overflow-hidden group"
+              className="glass-card project-card h-full flex flex-col overflow-hidden group"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="h-40 bg-gradient-to-br from-primary/10 to-secondary flex items-center justify-center">
                 <project.icon className="w-12 h-12 text-red-500 group-hover:scale-110 transition-transform duration-500" />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h4 className="font-display text-xl text-foreground mb-2">
                   {project.title}
                 </h4>
+
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                   {project.description}
                 </p>
@@ -195,7 +138,7 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="mt-auto flex gap-4">
                   <a
                     href={project.github}
                     target="_blank"

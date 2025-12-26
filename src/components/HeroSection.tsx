@@ -1,4 +1,10 @@
-import { ChevronDown, Mail, Phone } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -17,7 +23,19 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-      
+
+          {/* Role */}
+          <div
+            className="flex justify-center mb-6 opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-card">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm md:text-base text-muted-foreground tracking-wide">
+                MERN Stack Engineer
+              </span>
+            </div>
+          </div>
 
           {/* Name */}
           <h1
@@ -29,25 +47,10 @@ const HeroSection = () => {
             <span className="text-gradient">DEEPAK</span>
           </h1>
 
-          {/* Role Pills */}
-          <div
-            className="flex flex-wrap justify-center gap-4 mb-8 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.6s" }}
-          >
-            
-
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-muted-foreground">
-                MERN Stack Engineer
-              </span>
-            </div>
-          </div>
-
           {/* Contact Quick Links */}
           <div
             className="flex flex-wrap justify-center gap-4 mb-12 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.8s" }}
+            style={{ animationDelay: "0.6s" }}
           >
             <a
               href="mailto:kmgnanadeepak@gmail.com"
@@ -56,32 +59,73 @@ const HeroSection = () => {
               <Mail size={16} className="text-primary" />
               kmgnanadeepak@gmail.com
             </a>
+
             <a
               href="tel:9441652345"
               className="flex items-center gap-2 px-4 py-2 glass-card text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone size={16} className="text-primary" />
-             +91 9441652345
+              +91 9441652345
             </a>
           </div>
 
           {/* CTA Buttons */}
           <div
             className="flex flex-wrap justify-center gap-4 opacity-0 animate-fade-in"
-            style={{ animationDelay: "1s" }}
+            style={{ animationDelay: "0.8s" }}
           >
             <a href="#projects" className="btn-netflix pulse-glow">
-              <span>View Projects</span>
+              View Projects
             </a>
             <a href="#contact" className="btn-ghost">
               Get In Touch
             </a>
           </div>
+
+          {/* Social Links */}
+          <div
+            className="mt-14 flex flex-col items-center gap-4 opacity-0 animate-fade-in"
+            style={{ animationDelay: "1s" }}
+          >
+            <span className="text-xs tracking-widest text-muted-foreground">
+              FOLLOW ME
+            </span>
+
+            <div className="flex gap-4">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-3 icon-glow hover:scale-105 transition-transform"
+                aria-label="GitHub"
+              >
+                <Github size={22} />
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-3 icon-glow hover:scale-105 transition-transform"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={22} />
+              </a>
+
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-3 icon-glow hover:scale-105 transition-transform"
+                aria-label="Instagram"
+              >
+                <Instagram size={22} />
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-     
     </section>
   );
 };

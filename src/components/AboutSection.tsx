@@ -70,7 +70,14 @@ const AboutSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* About Header */}
         <div className="text-center mb-14 reveal">
-          <h2 className="section-title">ABOUT ME</h2>
+           <h2
+              className="font-display text-5xl md:text-6xl mb-6 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <span className="text-gradient">About</span>{" "}
+              <span className="text-foreground">Me</span>
+              
+            </h2>
           <p className="section-subtitle mx-auto">
             A Full Stack Developer specializing in the MERN stack, with hands-on
             experience building scalable web and mobile applications using REST
@@ -98,7 +105,14 @@ const AboutSection = () => {
 
         {/* Core Capabilities */}
         <div className="text-center mb-14 reveal">
-          <h2 className="section-title">CORE CAPABILITIES</h2>
+           <h2
+              className="font-display text-5xl md:text-6xl mb-6 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <span className="text-foreground">Core</span>{" "}
+              <span className="text-gradient">Capabilities</span>
+            </h2>
+
           <p className="section-subtitle mx-auto">
             Technical strengths and development mindset shaped by real-world
             projects and internships.
@@ -131,7 +145,7 @@ const AboutSection = () => {
         </div>
 
         {/* Quote */}
-        <div className="mt-20 reveal">
+        <div className="mt-10  reveal">
           <blockquote className="glass-card p-8 md:p-12 text-center max-w-3xl mx-auto">
             <p className="text-xl md:text-2xl text-foreground italic mb-4">
               “If it can’t be deployed, it’s not finished.”

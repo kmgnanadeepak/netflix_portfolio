@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Mail, Phone, Send, Github, Linkedin, Youtube } from "lucide-react";
+import { Mail, Phone, Send, Github, Linkedin, Instagram } from "lucide-react";
 
 const ContactSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -22,7 +22,8 @@ const ContactSection = () => {
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+    const elements =
+      sectionRef.current?.querySelectorAll(".reveal, .reveal-left, .reveal-right");
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -32,7 +33,6 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     alert("Thank you for your message! I'll get back to you soon.");
@@ -60,7 +60,7 @@ const ContactSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-16 reveal">
           <h2 className="section-title">GET IN TOUCH</h2>
           <p className="section-subtitle mx-auto">
@@ -73,7 +73,7 @@ const ContactSection = () => {
           {/* Contact Info */}
           <div className="reveal-left">
             <h3 className="font-display text-3xl text-foreground mb-8">
-              LET'S CONNECT
+              LET&apos;S CONNECT
             </h3>
 
             {/* Direct Contact */}
@@ -102,7 +102,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="text-foreground font-medium">9441652345</p>
+                  <p className="text-foreground font-medium">+91 9441652345</p>
                 </div>
               </a>
             </div>
@@ -112,33 +112,36 @@ const ContactSection = () => {
               <h4 className="font-display text-xl text-foreground mb-4">
                 FOLLOW ME
               </h4>
+
               <div className="flex gap-4">
                 <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card p-4 icon-glow"
+                  className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
                   aria-label="GitHub"
                 >
                   <Github size={24} />
                 </a>
+
                 <a
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card p-4 icon-glow"
+                  className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={24} />
                 </a>
+
                 <a
-                  href="https://youtube.com"
+                  href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card p-4 icon-glow"
-                  aria-label="YouTube"
+                  className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
+                  aria-label="Instagram"
                 >
-                  <Youtube size={24} />
+                  <Instagram size={24} />
                 </a>
               </div>
             </div>
@@ -167,7 +170,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="glass-input"
-                    placeholder="John Doe"
+                    placeholder="KL Rahul"
                   />
                 </div>
 
@@ -186,7 +189,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="glass-input"
-                    placeholder="john@example.com"
+                    placeholder="ex@example.com"
                   />
                 </div>
 
@@ -214,19 +217,17 @@ const ContactSection = () => {
                   disabled={isSubmitting}
                   className="btn-netflix w-full flex items-center justify-center gap-2 disabled:opacity-70"
                 >
-                  <span className="flex items-center gap-2">
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send size={18} />
-                        Send Message
-                      </>
-                    )}
-                  </span>
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </div>
             </form>
