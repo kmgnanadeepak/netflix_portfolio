@@ -88,7 +88,7 @@ const HeroSection = () => {
             style={{ animationDelay: "1s" }}
           >
             <span className="text-xs tracking-widest text-muted-foreground">
-              FOLLOW ME
+              LET'S CONNECT
             </span>
 
             <div className="flex gap-4">

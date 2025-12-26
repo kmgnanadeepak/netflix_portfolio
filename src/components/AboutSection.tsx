@@ -62,22 +62,19 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative overflow-hidden pt-16 md:pt-24 pb-28 md:pb-32"
+      className="relative overflow-hidden pt-20 md:pt-28 pb-12"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* About Header */}
-        <div className="text-center mb-14 reveal">
-           <h2
-              className="font-display text-5xl md:text-6xl mb-6 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <span className="text-gradient">About</span>{" "}
-              <span className="text-foreground">Me</span>
-              
-            </h2>
+        {/* ABOUT HEADER */}
+        <div className="text-center mb-16 reveal">
+          <h2 className="section-title">
+            <span className="text-gradient">About</span>{" "}
+            <span className="text-foreground">Me</span>
+          </h2>
+
           <p className="section-subtitle mx-auto">
             A Full Stack Developer specializing in the MERN stack, with hands-on
             experience building scalable web and mobile applications using REST
@@ -85,7 +82,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Stats */}
+        {/* STATS */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 reveal">
           {stats.map((stat, index) => (
             <div
@@ -103,15 +100,12 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Core Capabilities */}
+        {/* CORE CAPABILITIES */}
         <div className="text-center mb-14 reveal">
-           <h2
-              className="font-display text-5xl md:text-6xl mb-6 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <span className="text-foreground">Core</span>{" "}
-              <span className="text-gradient">Capabilities</span>
-            </h2>
+          <h2 className="section-title">
+            <span className="text-foreground">Core</span>{" "}
+            <span className="text-gradient">Capabilities</span>
+          </h2>
 
           <p className="section-subtitle mx-auto">
             Technical strengths and development mindset shaped by real-world
@@ -119,18 +113,21 @@ const AboutSection = () => {
           </p>
         </div>
 
-        {/* Highlights */}
+        {/* HIGHLIGHTS */}
         <div className="grid md:grid-cols-2 gap-6">
           {highlights.map((item, index) => (
             <div
               key={item.title}
-              className={`reveal-${index % 2 === 0 ? "left" : "right"} glass-card p-8 group`}
+              className={`reveal-${
+                index % 2 === 0 ? "left" : "right"
+              } glass-card p-8 group`}
               style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                   <item.icon size={24} />
                 </div>
+
                 <div>
                   <h3 className="font-display text-2xl text-foreground mb-2">
                     {item.title}
@@ -144,13 +141,15 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Quote */}
-        <div className="mt-10  reveal">
+        {/* QUOTE */}
+        <div className="mt-8 reveal">
           <blockquote className="glass-card p-8 md:p-12 text-center max-w-3xl mx-auto">
             <p className="text-xl md:text-2xl text-foreground italic mb-4">
               “If it can’t be deployed, it’s not finished.”
             </p>
-            <cite className="text-muted-foreground">— KM Gnana Deepak</cite>
+            <cite className="text-muted-foreground">
+              — KM Gnana Deepak
+            </cite>
           </blockquote>
         </div>
       </div>

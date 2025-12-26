@@ -6,7 +6,6 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -63,7 +62,7 @@ const Navbar = () => {
           }}
           className="font-display text-3xl text-primary hover:text-netflix-red-light transition-colors"
         >
-          idk
+          kmgd
         </a>
 
         {/* Desktop Navigation */}

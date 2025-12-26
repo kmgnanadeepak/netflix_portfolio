@@ -2,7 +2,10 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="relative py-16 md:py-24 overflow-hidden">
+    <section
+      id="experience"
+      className="relative py-16 md:py-24 overflow-hidden"
+    >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
@@ -17,18 +20,12 @@ const ExperienceSection = () => {
 
           {/* Section Header */}
           <div className="text-center mb-20">
-            <h2
-              className="font-display text-5xl md:text-6xl mb-6 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <h2 className="section-title">
               <span className="text-foreground">Industry</span>{" "}
               <span className="text-gradient">Experience</span>
             </h2>
 
-            <p
-              className="text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in"
-              style={{ animationDelay: "0.4s" }}
-            >
+            <p className="section-subtitle mx-auto">
               Hands-on experience building real-world full stack applications,
               backend systems, APIs, and cloud deployments.
             </p>
@@ -38,10 +35,7 @@ const ExperienceSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Internship Studio */}
-            <div
-              className="glass-card experience-card p-8 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.6s" }}
-            >
+            <div className="glass-card p-8 hover:scale-[1.02] transition-transform duration-300">
               <div className="flex items-start justify-between gap-6 mb-6">
                 <div>
                   <h3 className="text-2xl font-semibold text-foreground leading-snug">
@@ -63,7 +57,7 @@ const ExperienceSection = () => {
                 <li>• Designed and implemented 10+ RESTful APIs with CRUD operations.</li>
                 <li>• Integrated React frontend with Node.js & Express backend.</li>
                 <li>• Tested 15+ APIs using Postman and optimized backend structure.</li>
-                <li>• Deployed application using Docker containers on AWS EC2.</li>
+                <li>• Deployed applications using Docker containers on AWS EC2.</li>
               </ul>
 
               <div className="flex flex-wrap gap-3">
@@ -76,10 +70,7 @@ const ExperienceSection = () => {
             </div>
 
             {/* Cognifyz */}
-            <div
-              className="glass-card experience-card p-8 opacity-0 animate-fade-in-up"
-              style={{ animationDelay: "0.8s" }}
-            >
+            <div className="glass-card p-8 hover:scale-[1.02] transition-transform duration-300">
               <div className="flex items-start justify-between gap-6 mb-6">
                 <div>
                   <h3 className="text-2xl font-semibold text-foreground leading-snug">
@@ -100,7 +91,7 @@ const ExperienceSection = () => {
                 <li>• Developed frontend and backend features using HTML, CSS, and JavaScript.</li>
                 <li>• Implemented server-side logic using Node.js and Express.</li>
                 <li>• Built and tested backend routes following REST principles.</li>
-                <li>• Improved UI responsiveness and overall application performance.</li>
+                <li>• Improved UI responsiveness and application performance.</li>
               </ul>
 
               <div className="flex flex-wrap gap-3">

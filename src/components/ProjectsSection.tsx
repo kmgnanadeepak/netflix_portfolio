@@ -92,19 +92,24 @@ const ProjectsSection = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="pt-8 md:pt-12 pb-24 md:pb-32 relative overflow-hidden"
+      className="pt-8 md:pt-12 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 reveal">
-          <h2 className="section-title">MY PROJECTS</h2>
+        {/* HEADER */}
+        <div className="text-center mb-8 reveal">
+             <h2 className="section-title">
+            <span className="text-gradient">MY</span>{" "}
+             <span className="text-foreground">PROJECTS</span>
+               </h2>
           <p className="section-subtitle mx-auto">
             A collection of projects showcasing my skills in full-stack
             development and real-world problem solving.
           </p>
         </div>
 
+        {/* PROJECT GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
           {projects.map((project, index) => (
             <div
