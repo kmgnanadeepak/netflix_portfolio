@@ -89,7 +89,7 @@ const Navbar = () => {
 
         {/* Resume Button */}
         <a
-          href="/resume.pdf"
+          href="/KM_Gnana_Deepak_Resume.pdf"
           download
           className="hidden md:block btn-netflix"
         >

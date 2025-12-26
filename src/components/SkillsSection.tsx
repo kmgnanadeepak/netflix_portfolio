@@ -1,37 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-const techStack = [
-  {
-    name: "MongoDB",
-    icon: "🍃",
-    level: 85,
-    color: "from-green-500 to-green-600",
-  },
-  {
-    name: "Express.js",
-    icon: "⚡",
-    level: 92,
-    color: "from-gray-400 to-gray-500",
-  },
-  {
-    name: "React.js",
-    icon: "⚛️",
-    level: 75,
-    color: "from-cyan-400 to-cyan-500",
-  },
-  {
-    name: "Node.js",
-    icon: "💚",
-    level: 92,
-    color: "from-green-400 to-green-500",
-  },
-];
-
 const otherSkills = [
-  { name: "HTML/CSS", level: 90 },
+  { name: "HTML / CSS", level: 90 },
   { name: "JavaScript", level: 80 },
-  { name: "Mongo DB", level: 85 },
-  { name: "Node.js (Express)", level: 92 },
+  { name: "MongoDB", level: 85 },
+  { name: "Node.js & Express", level: 92 },
   { name: "React.js", level: 75 },
   { name: "Git & GitHub", level: 85 },
   { name: "REST APIs", level: 90 },
@@ -57,9 +30,7 @@ const SkillsSection = () => {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     const elements = sectionRef.current?.querySelectorAll(".reveal");
     elements?.forEach((el) => observer.observe(el));
@@ -78,42 +49,12 @@ const SkillsSection = () => {
         <div className="text-center mb-16 reveal">
           <h2 className="section-title">TECH STACK</h2>
           <p className="section-subtitle mx-auto">
-            Specialized in the MERN stack with a passion for creating modern web
-            applications.
+            Strong hands-on experience in full-stack development, cloud
+            deployment, and modern DevOps workflows.
           </p>
         </div>
 
-        {/* MERN Stack Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 reveal">
-          {techStack.map((tech, index) => (
-            <div
-              key={tech.name}
-              className="glass-card p-6 text-center group cursor-pointer"
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
-              <div className="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">
-                {tech.icon}
-              </div>
-              <h3 className="font-display text-xl md:text-2xl text-foreground mb-4">
-                {tech.name}
-              </h3>
-              <div className="skill-bar">
-                <div
-                  className="skill-bar-fill transition-all duration-1000 ease-out"
-                  style={{
-                    width: isVisible ? `${tech.level}%` : "0%",
-                    transitionDelay: `${0.3 + index * 0.1}s`,
-                  }}
-                />
-              </div>
-              <span className="text-sm text-muted-foreground mt-2 block">
-                {tech.level}%
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* MERN Stack Banner */}
+        {/* SINGLE MERN STACK SECTION (UNCHANGED) */}
         <div className="glass-card p-8 md:p-12 mb-20 reveal">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
@@ -124,6 +65,7 @@ const SkillsSection = () => {
                 MongoDB • Express.js • React.js • Node.js
               </p>
             </div>
+
             <div className="flex gap-4">
               <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-3xl animate-float">
                 🍃
@@ -150,11 +92,18 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        {/* Other Skills */}
+        {/* TECH SKILLS */}
         <div className="reveal">
-          <h3 className="font-display text-3xl text-center text-foreground mb-8">
-            TECH SKILLS
-          </h3>
+          <h2
+  className="font-display text-5xl md:text-6xl mb-8 text-center opacity-0 animate-fade-in-up"
+  style={{ animationDelay: "0.2s" }}
+>
+  
+<span className="text-gradient">TECH</span>{" "}
+<span className="text-foreground">SKILLS</span>
+</h2>
+
+
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
             {otherSkills.map((skill, index) => (
               <div key={skill.name} className="group">
@@ -162,14 +111,17 @@ const SkillsSection = () => {
                   <span className="text-foreground font-medium group-hover:text-primary transition-colors">
                     {skill.name}
                   </span>
-                  <span className="text-muted-foreground">{skill.level}%</span>
+                  <span className="text-muted-foreground">
+                    {skill.level}%
+                  </span>
                 </div>
+
                 <div className="skill-bar">
                   <div
                     className="skill-bar-fill transition-all duration-1000 ease-out"
                     style={{
                       width: isVisible ? `${skill.level}%` : "0%",
-                      transitionDelay: `${0.5 + index * 0.05}s`,
+                      transitionDelay: `${0.4 + index * 0.05}s`,
                     }}
                   />
                 </div>

@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
 
 @layer base {
   :root {
@@ -517,4 +518,15 @@
   100% {
     opacity: 1;
   }
+}
+/* Prevent glow overlays from blocking clicks */
+.project-card::before,
+.project-card::after {
+  pointer-events: none;
+}
+
+.project-card a {
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
 }

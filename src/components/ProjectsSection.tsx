@@ -16,7 +16,6 @@ const projects = [
     description:
       "A real-time fall detection and emergency response system designed to identify sudden falls and trigger immediate SOS alerts to family and friends.",
     tech: ["React", "Express.js", "MongoDB", "Node.js", "Responsive Design"],
-    gradient: "from-red-600/30 to-black",
     github: "https://github.com/kmgnanadeepak/safe-guard.git",
     live: "https://safeguard158.netlify.app",
     icon: Shield,
@@ -93,12 +92,11 @@ const ProjectsSection = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="py-24 md:py-32 relative overflow-hidden"
+      className="pt-8 md:pt-12 pb-24 md:pb-32 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16 reveal">
           <h2 className="section-title">MY PROJECTS</h2>
           <p className="section-subtitle mx-auto">
@@ -107,9 +105,6 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-       
-
-        {/* Grid Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
           {projects.map((project, index) => (
             <div
@@ -143,15 +138,16 @@ const ProjectsSection = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="icon-glow text-muted-foreground"
+                    className="glass-card p-3 icon-glow text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Github size={20} />
                   </a>
+
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="icon-glow text-muted-foreground"
+                    className="glass-card p-3 icon-glow text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <ExternalLink size={20} />
                   </a>

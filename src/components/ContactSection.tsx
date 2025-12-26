@@ -115,7 +115,7 @@ const ContactSection = () => {
 
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/kmgnanadeepak"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
@@ -125,7 +125,7 @@ const ContactSection = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/kmgnanadeepak"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
@@ -135,7 +135,7 @@ const ContactSection = () => {
                 </a>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/i_dk_158"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
