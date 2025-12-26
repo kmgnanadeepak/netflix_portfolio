@@ -44,7 +44,7 @@ const HeroSection = () => {
           >
             <span className="text-foreground">KM GNANA</span>
             <br />
-            <span className="text-gradient">DEEPAK</span>
+            <span className="text-gradient tracking-[0.1em]">DEEPAK</span>
           </h1>
 
           {/* Contact Quick Links */}
@@ -103,7 +103,7 @@ const HeroSection = () => {
               </a>
 
               <a
-                href="https://linkedin.com/kmgnanadeepak"
+                href="https://www.linkedin.com/in/kmgnanadeepak"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-card p-3 icon-glow hover:scale-105 transition-transform"

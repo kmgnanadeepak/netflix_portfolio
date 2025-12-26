@@ -84,7 +84,7 @@ const AchievementsSection = () => {
       {/* ================= ACHIEVEMENTS ================= */}
       <section
         id="achievements"
-        className="relative py-20 px-4 md:px-8 overflow-hidden"
+        className="relative py-4 px-4 md:px-8 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-netflix-red/3 to-transparent pointer-events-none" />
         <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-netflix-red/5 rounded-full blur-3xl pointer-events-none" />
@@ -140,7 +140,7 @@ const AchievementsSection = () => {
       {/* ================= CERTIFICATIONS ================= */}
       <section
         id="certifications"
-        className="relative py-20 px-4 md:px-8 overflow-hidden"
+        className="relative py-2 px-4 md:px-8 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-netflix-red/3 to-transparent pointer-events-none" />
         <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-netflix-red/5 rounded-full blur-3xl pointer-events-none" />

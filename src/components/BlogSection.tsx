@@ -111,7 +111,7 @@ const BlogSection = () => {
     <section
       id="blog"
       ref={sectionRef}
-      className="py-24 md:py-32 relative overflow-hidden"
+      className="py-2 md:py-32 relative overflow-hidden"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}

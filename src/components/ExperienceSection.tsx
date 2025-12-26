@@ -41,7 +41,7 @@ const experiences = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-20 px-4 md:px-8 relative overflow-hidden">
+    <section id="experience" className="py-10 px-4 md:px-8 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-netflix-red/5 to-transparent pointer-events-none" />
       

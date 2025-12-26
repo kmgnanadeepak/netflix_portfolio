@@ -8,32 +8,40 @@ const stats = [
   { value: "100%", label: "Dedication & Problem-Solving Mindset" },
 ];
 
+import {
+  Layers,
+  Server,
+  Cloud,
+  Gauge
+} from "lucide-react";
+
 const highlights = [
   {
-    icon: Code2,
-    title: "Full Stack Development",
+    icon: Layers, // architecture, layers, system design
+    title: "End-to-End Application Engineering",
     description:
-      "Building robust web applications with modern technologies and best practices.",
+      "Designing and building scalable full-stack applications with clean architecture, modular code, and production-ready workflows.",
   },
   {
-    icon: Film,
-    title: "Video Editing",
+    icon: Server, // backend, APIs, systems
+    title: "API Design & Backend Systems",
     description:
-      "Creating stunning visual content with DaVinci Resolve and professional editing techniques.",
+      "Developing secure and performant REST APIs using Node.js & Express, handling authentication, authorization, and data flow efficiently.",
   },
   {
-    icon: Zap,
+    icon: Cloud, // cloud + docker + aws
+    title: "Cloud-Ready & Containerized Deployments",
+    description:
+      "Packaging applications using Docker and deploying them on AWS infrastructure with proper environment isolation and scalability in mind.",
+  },
+  {
+    icon: Gauge, // speed, performance
     title: "Performance Focused",
     description:
       "Optimizing applications for speed, scalability, and exceptional user experience.",
   },
-  {
-    icon: Heart,
-    title: "Passionate Learner",
-    description:
-      "Constantly exploring new technologies and staying ahead of industry trends.",
-  },
 ];
+
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -62,10 +70,11 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative overflow-hidden pt-20 md:pt-28 pb-12"
+      className="relative overflow-hidden pt-0 md:pt-28 pb-12"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
+    <div className="absolute inset-0 p-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
+
 
       <div className="container mx-auto px-6 relative z-10">
         {/* ABOUT HEADER */}

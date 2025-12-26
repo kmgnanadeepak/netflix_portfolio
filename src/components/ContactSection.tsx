@@ -72,7 +72,7 @@ const ContactSection = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="pt-32 md:pt-40 pb-24 md:pb-32 relative overflow-hidden"
+      className="pt-16 md:pt-40 pb-24 md:pb-10 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
@@ -145,7 +145,7 @@ const ContactSection = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com/kmgnanadeepak"
+                  href="https://www.linkedin.com/in/kmgnanadeepak"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass-card p-4 icon-glow hover:scale-105 transition-transform"
