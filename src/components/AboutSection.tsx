@@ -2,10 +2,10 @@ import { useEffect, useRef } from "react";
 import { Code2, Film, Zap, Heart } from "lucide-react";
 
 const stats = [
-  { value: "3+", label: "Years Experience" },
-  { value: "20+", label: "Projects Completed" },
-  { value: "15+", label: "Happy Clients" },
-  { value: "100%", label: "Dedication" },
+  { value: "2+", label: "Industry Internships" },
+  { value: "5+", label: "Major Projects Built" },
+  { value: "15+", label: "APIs Tested & Deployed" },
+  { value: "100%", label: "Dedication & Problem-Solving Mindset" },
 ];
 
 const highlights = [
@@ -36,7 +36,7 @@ const highlights = [
 ];
 
 const AboutSection = () => {
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,7 +50,9 @@ const AboutSection = () => {
       { threshold: 0.1 }
     );
 
-    const elements = sectionRef.current?.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+    const elements = sectionRef.current?.querySelectorAll(
+      ".reveal, .reveal-left, .reveal-right"
+    );
     elements?.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -60,18 +62,19 @@ const AboutSection = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="py-24 md:py-32 relative overflow-hidden"
+      className="relative overflow-hidden pt-16 md:pt-24 pb-28 md:pb-32"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16 reveal">
+        {/* About Header */}
+        <div className="text-center mb-14 reveal">
           <h2 className="section-title">ABOUT ME</h2>
           <p className="section-subtitle mx-auto">
-            A passionate developer and creative editor dedicated to building
-            exceptional digital experiences.
+            A Full Stack Developer specializing in the MERN stack, with hands-on
+            experience building scalable web and mobile applications using REST
+            APIs, JWT authentication, AWS, Docker, and CI/CD pipelines.
           </p>
         </div>
 
@@ -93,7 +96,16 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Highlights Grid */}
+        {/* Core Capabilities */}
+        <div className="text-center mb-14 reveal">
+          <h2 className="section-title">CORE CAPABILITIES</h2>
+          <p className="section-subtitle mx-auto">
+            Technical strengths and development mindset shaped by real-world
+            projects and internships.
+          </p>
+        </div>
+
+        {/* Highlights */}
         <div className="grid md:grid-cols-2 gap-6">
           {highlights.map((item, index) => (
             <div
@@ -122,7 +134,7 @@ const AboutSection = () => {
         <div className="mt-20 reveal">
           <blockquote className="glass-card p-8 md:p-12 text-center max-w-3xl mx-auto">
             <p className="text-xl md:text-2xl text-foreground italic mb-4">
-              "Code is poetry written in logic, and video editing is storytelling through visuals."
+              “If it can’t be deployed, it’s not finished.”
             </p>
             <cite className="text-muted-foreground">— KM Gnana Deepak</cite>
           </blockquote>

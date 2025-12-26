@@ -63,7 +63,7 @@ const Navbar = () => {
           }}
           className="font-display text-3xl text-primary hover:text-netflix-red-light transition-colors"
         >
-          KGD
+          idk
         </a>
 
         {/* Desktop Navigation */}

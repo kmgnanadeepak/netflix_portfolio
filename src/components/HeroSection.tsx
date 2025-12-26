@@ -17,16 +17,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container mx-auto px-6 pt-24 pb-12 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Tagline */}
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.2s" }}
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">
-              Passionate Full Stacker and Editor
-            </span>
-          </div>
+      
 
           {/* Name */}
           <h1
@@ -38,15 +29,20 @@ const HeroSection = () => {
             <span className="text-gradient">DEEPAK</span>
           </h1>
 
-          {/* Role */}
-          <p
-            className="text-xl md:text-2xl text-muted-foreground mb-8 opacity-0 animate-fade-in"
+          {/* Role Pills */}
+          <div
+            className="flex flex-wrap justify-center gap-4 mb-8 opacity-0 animate-fade-in"
             style={{ animationDelay: "0.6s" }}
           >
-            Full Stack Developer{" "}
-            <span className="text-primary">&</span> DaVinci Resolve
-            Editor
-          </p>
+            
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="text-sm text-muted-foreground">
+                MERN Stack Engineer
+              </span>
+            </div>
+          </div>
 
           {/* Contact Quick Links */}
           <div
@@ -65,7 +61,7 @@ const HeroSection = () => {
               className="flex items-center gap-2 px-4 py-2 glass-card text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone size={16} className="text-primary" />
-              9441652345
+             +91 9441652345
             </a>
           </div>
 
@@ -85,14 +81,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a
-        href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors opacity-0 animate-fade-in"
-        style={{ animationDelay: "1.2s" }}
-      >
-        <span className="text-xs uppercase tracking-widest">Scroll</span>
-        <ChevronDown size={20} className="animate-bounce" />
-      </a>
+     
     </section>
   );
 };

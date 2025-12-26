@@ -1,15 +1,25 @@
 import { useEffect, useRef } from "react";
-import { ExternalLink, Github } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  BarChart3,
+  Film,
+  CheckCircle,
+  Bot,
+  Dumbbell,
+  Shield,
+} from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Safe Fall – Fall Detection & SOS Alert System",
     description:
-      "A full-featured online store with user authentication, product management, and secure payment integration.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com",
-    live: "https://example.com",
-    image: "🛒",
+      "A real-time fall detection and emergency response system designed to identify sudden falls and trigger immediate SOS alerts to family and friends. The platform focuses on rapid response, user safety, and reliable notification flow.",
+    tech: ["React", "Express.js", "MongoDB", "Node.js", "Responsive Design"],
+    gradient: "from-red-600/30 to-black",
+    github: "https://github.com/kmgnanadeepak/safe-guard.git",
+    live: "https://safeguard158.netlify.app",
+    icon: Shield,
   },
   {
     title: "Social Media Dashboard",
@@ -18,7 +28,7 @@ const projects = [
     tech: ["React", "Express", "PostgreSQL", "Chart.js"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "📊",
+    icon: BarChart3,
   },
   {
     title: "Video Streaming App",
@@ -27,7 +37,7 @@ const projects = [
     tech: ["MERN Stack", "AWS S3", "JWT", "Redis"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "🎬",
+    icon: Film,
   },
   {
     title: "Task Management System",
@@ -36,7 +46,7 @@ const projects = [
     tech: ["React", "Socket.io", "MongoDB", "Node.js"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "✅",
+    icon: CheckCircle,
   },
   {
     title: "AI Content Generator",
@@ -45,16 +55,16 @@ const projects = [
     tech: ["Next.js", "OpenAI API", "Prisma", "PostgreSQL"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "🤖",
+    icon: Bot,
   },
   {
     title: "Fitness Tracker",
     description:
       "Health and fitness application with workout logging, progress tracking, and nutrition planning.",
-    tech: ["React Native", "Node.js", "MongoDB", "Charts"],
+    tech: ["React Native", "Node.js", "MongoDB"],
     github: "https://github.com",
     live: "https://example.com",
-    image: "💪",
+    icon: Dumbbell,
   },
 ];
 
@@ -85,11 +95,9 @@ const ProjectsSection = () => {
       ref={sectionRef}
       className="py-24 md:py-32 relative overflow-hidden"
     >
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
         <div className="text-center mb-16 reveal">
           <h2 className="section-title">MY PROJECTS</h2>
           <p className="section-subtitle mx-auto">
@@ -98,11 +106,11 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Netflix-style Horizontal Scroll */}
         <div className="mb-12">
           <h3 className="font-display text-2xl text-foreground mb-6 reveal">
             FEATURED WORKS
           </h3>
+
           <div className="horizontal-scroll reveal">
             {projects.slice(0, 4).map((project, index) => (
               <div
@@ -110,12 +118,14 @@ const ProjectsSection = () => {
                 className="glass-card w-80 md:w-96 flex-shrink-0 overflow-hidden group"
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
-                {/* Project Image/Icon */}
-                <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-500">
-                  {project.image}
+                <div
+                  className={`relative h-48 bg-gradient-to-br ${
+                    project.gradient || "from-primary/20 to-secondary"
+                  } flex items-center justify-center`}
+                >
+                  <project.icon className="w-16 h-16 text-white/90 group-hover:scale-110 transition-transform duration-500" />
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <h4 className="font-display text-2xl text-foreground mb-2">
                     {project.title}
@@ -124,7 +134,6 @@ const ProjectsSection = () => {
                     {project.description}
                   </p>
 
-                  {/* Tech Stack */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((t) => (
                       <span key={t} className="tag-chip">
@@ -133,7 +142,6 @@ const ProjectsSection = () => {
                     ))}
                   </div>
 
-                  {/* Links */}
                   <div className="flex gap-3">
                     <a
                       href={project.github}
@@ -150,10 +158,8 @@ const ProjectsSection = () => {
                       rel="noopener noreferrer"
                       className="btn-netflix flex-1 flex items-center justify-center gap-2 py-2"
                     >
-                      <span className="flex items-center gap-2">
-                        <ExternalLink size={16} />
-                        Demo
-                      </span>
+                      <ExternalLink size={16} />
+                      Demo
                     </a>
                   </div>
                 </div>
@@ -162,20 +168,17 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Grid Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-          {projects.slice(0, 6).map((project, index) => (
+          {projects.map((project, index) => (
             <div
               key={project.title + index}
               className="glass-card overflow-hidden group"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              {/* Project Image/Icon */}
-              <div className="h-40 bg-gradient-to-br from-primary/10 to-secondary flex items-center justify-center text-5xl group-hover:scale-110 transition-transform duration-500">
-                {project.image}
+              <div className="h-40 bg-gradient-to-br from-primary/10 to-secondary flex items-center justify-center">
+                <project.icon className="w-12 h-12 text-red-500 group-hover:scale-110 transition-transform duration-500" />
               </div>
 
-              {/* Content */}
               <div className="p-6">
                 <h4 className="font-display text-xl text-foreground mb-2">
                   {project.title}
@@ -184,7 +187,6 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.slice(0, 3).map((t) => (
                     <span key={t} className="tag-chip text-xs">
@@ -193,7 +195,6 @@ const ProjectsSection = () => {
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex gap-3">
                   <a
                     href={project.github}

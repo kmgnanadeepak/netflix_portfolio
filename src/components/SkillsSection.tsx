@@ -10,32 +10,34 @@ const techStack = [
   {
     name: "Express.js",
     icon: "⚡",
-    level: 90,
+    level: 92,
     color: "from-gray-400 to-gray-500",
   },
   {
     name: "React.js",
     icon: "⚛️",
-    level: 95,
+    level: 75,
     color: "from-cyan-400 to-cyan-500",
   },
   {
     name: "Node.js",
     icon: "💚",
-    level: 88,
+    level: 92,
     color: "from-green-400 to-green-500",
   },
 ];
 
 const otherSkills = [
-  { name: "TypeScript", level: 85 },
-  { name: "JavaScript", level: 95 },
   { name: "HTML/CSS", level: 90 },
-  { name: "Tailwind CSS", level: 92 },
-  { name: "Git & GitHub", level: 88 },
-  { name: "DaVinci Resolve", level: 85 },
+  { name: "JavaScript", level: 80 },
+  { name: "Mongo DB", level: 85 },
+  { name: "Node.js (Express)", level: 92 },
+  { name: "React.js", level: 75 },
+  { name: "Git & GitHub", level: 85 },
   { name: "REST APIs", level: 90 },
-  { name: "PostgreSQL", level: 80 },
+  { name: "Docker (Containerization)", level: 90 },
+  { name: "CI/CD Pipelines", level: 80 },
+  { name: "AWS (EC2, S3, IAM)", level: 70 },
 ];
 
 const SkillsSection = () => {
@@ -151,7 +153,7 @@ const SkillsSection = () => {
         {/* Other Skills */}
         <div className="reveal">
           <h3 className="font-display text-3xl text-center text-foreground mb-8">
-            OTHER SKILLS
+            TECH SKILLS
           </h3>
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
             {otherSkills.map((skill, index) => (
