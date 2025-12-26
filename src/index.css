@@ -530,3 +530,40 @@
   position: relative;
   z-index: 10;
 }
+/* EXPERIENCE CARD – PREMIUM HOVER */
+.experience-card {
+  position: relative;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.45s ease;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(229, 9, 20, 0.55),
+    rgba(229, 9, 20, 0.18),
+    transparent
+  );
+  opacity: 0;
+  filter: blur(18px);
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 22px 45px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(229, 9, 20, 0.25);
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}

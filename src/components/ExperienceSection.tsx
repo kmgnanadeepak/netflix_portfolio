@@ -2,7 +2,7 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="relative py-10 overflow-hidden">
+    <section id="experience" className="relative py-16 md:py-24 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent" />
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
@@ -39,7 +39,7 @@ const ExperienceSection = () => {
 
             {/* Internship Studio */}
             <div
-              className="glass-card p-8 opacity-0 animate-fade-in-up"
+              className="glass-card experience-card p-8 opacity-0 animate-fade-in-up"
               style={{ animationDelay: "0.6s" }}
             >
               <div className="flex items-start justify-between gap-6 mb-6">
@@ -54,7 +54,7 @@ const ExperienceSection = () => {
 
                 <div className="flex items-start gap-2 text-sm text-muted-foreground whitespace-nowrap pt-1">
                   <Calendar size={16} className="mt-[2px]" />
-                  <span>Nov 2025 - Dec 2025</span>
+                  <span>Nov 2025 – Dec 2025</span>
                 </div>
               </div>
 
@@ -77,7 +77,7 @@ const ExperienceSection = () => {
 
             {/* Cognifyz */}
             <div
-              className="glass-card p-8 opacity-0 animate-fade-in-up"
+              className="glass-card experience-card p-8 opacity-0 animate-fade-in-up"
               style={{ animationDelay: "0.8s" }}
             >
               <div className="flex items-start justify-between gap-6 mb-6">
@@ -92,7 +92,7 @@ const ExperienceSection = () => {
 
                 <div className="flex items-start gap-2 text-sm text-muted-foreground whitespace-nowrap pt-1">
                   <Briefcase size={16} className="mt-[2px]" />
-                  <span>Dec 2025 - Jan 2026</span>
+                  <span>Dec 2025 – Jan 2026</span>
                 </div>
               </div>
 
