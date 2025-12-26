@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { blogLinks } from "../data/blogLinks";
 import { Clock, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = ["All", "Dev Tutorials", "Project Writeups", "Personal Insights"];
@@ -78,6 +79,7 @@ const BlogSection = () => {
       : blogPosts.filter((post) => post.category === activeCategory);
 
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+
   const currentPosts = filteredPosts.slice(
     (currentPage - 1) * postsPerPage,
     currentPage * postsPerPage
@@ -112,16 +114,15 @@ const BlogSection = () => {
       className="py-24 md:py-32 relative overflow-hidden"
     >
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-12 reveal">
           <h2 className="section-title">BLOG</h2>
           <p className="section-subtitle mx-auto">
-            Thoughts, tutorials, and insights from my journey as a developer and
-            content creator.
+            Thoughts, tutorials, and insights from my journey as a developer and content creator.
           </p>
         </div>
 
-        {/* Category Filters */}
+        {/* Categories */}
         <div className="flex flex-wrap justify-center gap-3 mb-12 reveal">
           {categories.map((category) => (
             <button
@@ -138,15 +139,14 @@ const BlogSection = () => {
           ))}
         </div>
 
-        {/* Blog Grid */}
+        {/* Blog Cards */}
         <div className="grid md:grid-cols-2 gap-6 mb-12 reveal">
           {currentPosts.map((post, index) => (
             <article
               key={post.id}
-              className="glass-card p-6 group cursor-pointer"
+              className="glass-card p-6 group"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              {/* Category & Meta */}
               <div className="flex items-center justify-between mb-4">
                 <span className="tag-chip">{post.category}</span>
                 <div className="flex items-center gap-4 text-xs text-muted-foreground">
@@ -158,17 +158,14 @@ const BlogSection = () => {
                 </div>
               </div>
 
-              {/* Title */}
               <h3 className="font-display text-2xl text-foreground mb-3 group-hover:text-primary transition-colors">
                 {post.title}
               </h3>
 
-              {/* Excerpt */}
               <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                 {post.excerpt}
               </p>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {post.tags.map((tag) => (
                   <span
@@ -180,10 +177,10 @@ const BlogSection = () => {
                 ))}
               </div>
 
-              {/* Read More */}
+              {/* WORKING REDIRECT */}
               <a
-                href="#"
-                className="inline-flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-4 transition-all"
+                href={blogLinks[post.id]}
+                className="inline-flex items-center gap-2 text-primary text-sm font-medium relative z-10"
               >
                 Read More
                 <ArrowRight size={16} />
@@ -198,7 +195,7 @@ const BlogSection = () => {
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="p-2 glass-card disabled:opacity-50 disabled:cursor-not-allowed hover:text-primary transition-colors"
+              className="p-2 glass-card disabled:opacity-50"
             >
               <ChevronLeft size={20} />
             </button>
@@ -208,10 +205,10 @@ const BlogSection = () => {
                 <button
                   key={page}
                   onClick={() => setCurrentPage(page)}
-                  className={`w-10 h-10 rounded-lg font-medium transition-all ${
+                  className={`w-10 h-10 rounded-lg font-medium ${
                     currentPage === page
                       ? "bg-primary text-primary-foreground"
-                      : "glass-card text-muted-foreground hover:text-foreground"
+                      : "glass-card text-muted-foreground"
                   }`}
                 >
                   {page}
@@ -222,7 +219,7 @@ const BlogSection = () => {
             <button
               onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="p-2 glass-card disabled:opacity-50 disabled:cursor-not-allowed hover:text-primary transition-colors"
+              className="p-2 glass-card disabled:opacity-50"
             >
               <ChevronRight size={20} />
             </button>
