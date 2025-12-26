@@ -6,6 +6,9 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#achievements", label: "Achievements" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -18,7 +21,6 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      // Update active section based on scroll position
       const sections = navLinks.map((link) => link.href.slice(1));
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
@@ -65,7 +67,7 @@ const Navbar = () => {
           kmgd
         </a>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -86,7 +88,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Resume Button */}
+        {/* Resume */}
         <a
           href="/KM_Gnana_Deepak_Resume.pdf"
           download
@@ -95,7 +97,7 @@ const Navbar = () => {
           <span>Resume</span>
         </a>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
@@ -131,8 +133,9 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+
           <a
-            href="/resume.pdf"
+            href="/KM_Gnana_Deepak_Resume.pdf"
             download
             className="btn-netflix text-center mt-4"
           >

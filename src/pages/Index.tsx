@@ -3,6 +3,7 @@ import NetflixLoader from "@/components/NetflixLoader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
+import AchievementsSection from "@/components/AchievementsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -43,8 +44,9 @@ const Index = () => {
         <main>
           <HeroSection />
           <AboutSection />
-          <ExperienceSection />
           <SkillsSection />
+          <ExperienceSection />
+          <AchievementsSection />
           <ProjectsSection /> 
           <ContactSection />
         </main>
