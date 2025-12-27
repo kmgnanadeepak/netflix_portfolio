@@ -72,7 +72,7 @@ const ContactSection = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="pt-16 md:pt-40 pb-24 md:pb-10 relative overflow-hidden"
+      className="pt-16 md:pt-14 pb-24 md:pb-10 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/30 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
